@@ -19,11 +19,11 @@ function App() {
     setSelectedMonth(month);
   };
   return (
-    <div class="h-screen bg-blue-100  ">
+    <div class="h-screen md:bg-blue-100  ">
      
 
       <nav class="bg-white p-1 md:p-1 relative">
-        <div class=" max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto ">
           <div class="relative hidden md:block ml-20">
             <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
               <svg class="w-4 h-4 text-gray-500 " aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -132,7 +132,7 @@ function App() {
 
             <li className=' rounded-lg  p-1 mt-2'>
               <div>
-                <a href="#" class="flex items-center justify-center text-gray-900 rounded-lg   ">
+                <a href="#" class="flex items-center justify-center text-gray-900 rounded-lg ">
                   <div class="flex-shrink-0 w-12 h-12 text-gray-500 transition duration-75 group-hover:bg-blue-500 bg-gray-200 rounded-lg group-active:bg-blue-500 group-focus:bg-blue-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 18"
                   >
                   </div>
@@ -181,7 +181,7 @@ function App() {
             <span className="flex-1 ml-3 whitespace-nowrap text-gray-400 text-sm hover:text-black hover:font-semibold">Dashboard</span>
           </a>
         </div>
-        <div className="mt-2 sm:mt-0">
+        <div className="mt-2 sm:mt-0 md:mt-2">
           <div className="px-2 sm:px-10">
             <MyDatePicker />
           </div>
@@ -189,7 +189,7 @@ function App() {
       </div>
 
       <div className="flex flex-wrap justify-evenly mt-1 px-2 sm:px-20">
-        <a href="#" class="block max-w-sm p-4 w-60 h-28 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 md:ml-16">
+        <a href="#" class="block max-w-sm p-4 w-60 h-28 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 mt-2 md:ml-16">
           <div class="flex justify-around ">
             <div class="mt-2 font-bold text-2xl">
               $16.4k
@@ -296,11 +296,11 @@ function App() {
         </a>
 
       </div>
-      <div class="flex flex-col md:flex-row">
+      <div class="flex flex-col md:flex-row mt-2 md:mt-1">
         <div>
           <TabbedComponent />
         </div>
-        <div class="md:max-w-5xl  bg-white mr-4 p-2 mt-2 rounded-lg shadow ">
+        <div class="md:max-w-5xl  bg-white mr-4 p-2 mt-2 rounded-lg shadow md:mr-4">
           <div class="flex flex-row mt-2 items-center">
             <img id="1" src="https://t3.ftcdn.net/jpg/05/24/49/24/360_F_524492467_7ZDUkMzM2Vl6vf6yvw9PKwHFYn2kWda9.jpg" class="w-7 h-7 mt-4"></img>
             <h1 class="md:pt-5 text-xl pl-3">Live Map</h1>
@@ -328,7 +328,7 @@ function App() {
       </div>
 
 
-      <div class="mb-4 ml-2 md:ml-10">
+      <div class="mb-4 ml-2 md:ml-10 mt-4 md:mt-2">
         <div class="flex flex-col items-center md:justify-between md:flex-row md:mr-4">
           <div class="max-w-sm bg-white border rounded-lg shadow mb-4 md:ml-28 md:mr-4 px-4">
             <p class="ml-4 font-semibold">Invoices value</p>
