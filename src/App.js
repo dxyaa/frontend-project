@@ -3,6 +3,14 @@ import './App.css';
 import MonthPicker from './monthpicker';
 import React, { useState } from 'react';
 import TabbedComponent from './tabbedcomponent';
+import 'flowbite';
+import DatePicker from 'react-datepicker';
+import 'react-datepicker/dist/react-datepicker.css';
+import MyDatePicker from './MyDatePicker';
+/*import Datepicker from 'flowbite-datepicker/Datepicker';
+const datepickerEl = document.getElementById('datepickerId');*/
+
+<script src="../path/to/flowbite/dist/flowbite.min.js"></script>
 
 function App() {
   const [selectedMonth, setSelectedMonth] = useState('January');
@@ -70,7 +78,7 @@ function App() {
         </svg>
       </button>
 
-      <nav id="default-sidebar" className="fixed top-0 left-0 bg-white w-70 md:w-70 transition-transform -translate-x-full sm:translate-x-0" aria-label="Sidebar">
+      <nav id="default-sidebar" className="fixed top-0 left-0 bg-white w-70 md:w-70 transition-transform -translate-x-full sm:translate-x-0 border border-1 border-gray-200" aria-label="Sidebar">
         <div className="h-3/5 px-5 py-10 space-y-1 bg-white text-black rounded-lg">
           <ul className="font-medium">
             <li className="group rounded-lg p-1">
@@ -168,14 +176,15 @@ function App() {
         </div>
         <div className="mt-2">
           <div className="px-2 sm:px-10">
-            <MonthPicker selectedMonth={selectedMonth} onMonthChange={handleMonthChange} />
+
+            <MyDatePicker />
           </div>
         </div>
       </div>
       <div className="flex flex-wrap justify-evenly mt-2 px-2 sm:px-20">
-        <a href="#" class="block max-w-sm p-6 w-60 h-30 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ml-16">
-          <div class="flex justify-around mt-2">
-            <div class="mt-4 font-bold text-2xl">
+        <a href="#" class="block max-w-sm p-4 w-60 h-28 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ml-16">
+          <div class="flex justify-around ">
+            <div class="mt-2 font-bold text-2xl">
               $16.4k
             </div>
             <div>
@@ -189,14 +198,14 @@ function App() {
           </div>
           <div class="flex justify-start text-sm mb-2">
             <a href="#" class="flex items-center  rounded-lg  group">
-              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Eo_circle_green_arrow-up-right.svg/800px-Eo_circle_green_arrow-up-right.svg.png" class="h-4 w-4 "></img>
-              <span class="flex-1 ml-3 whitespace-nowrap text-gray-400 text-sm  ">90% present month </span>
+              <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Eo_circle_green_arrow-up-right.svg/800px-Eo_circle_green_arrow-up-right.svg.png" class="h-4 w-4 mb-5"></img>
+              <span class="flex-1 ml-3 whitespace-nowrap text-gray-400 text-sm mb-5 ">90% present month </span>
             </a>
           </div>
         </a>
-        <a href="#" class=" block max-w-sm p-6 w-60 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
-          <div class="flex justify-around mt-2">
-            <div class="mt-4 font-bold text-2xl">
+        <a href="#" class=" block max-w-sm p-4 w-60 h-28 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
+          <div class="flex justify-around ">
+            <div class="mt-2 font-bold text-2xl">
               1400
             </div>
             <div>
@@ -215,9 +224,9 @@ function App() {
             </a>
           </div>
         </a>
-        <a href="#" class=" block max-w-sm w-60 p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
-          <div class="flex justify-around mt-2">
-            <div class="mt-4 font-bold text-2xl">
+        <a href="#" class="block max-w-sm p-4 w-60 h-28 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100">
+          <div class="flex justify-around ">
+            <div class="mt-2 font-bold text-2xl">
               120
             </div>
             <div>
@@ -236,9 +245,9 @@ function App() {
             </a>
           </div>
         </a>
-        <a href="#" class=" block max-w-sm p-6 w-60  bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
-          <div class="flex justify-around mt-2">
-            <div class="mt-4 font-bold text-2xl">
+        <a href="#" class=" block max-w-sm p-4 w-60 h-28 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100  ">
+          <div class="flex justify-around ">
+            <div class="mt-2 font-bold text-2xl">
               1380
             </div>
             <div>
@@ -257,9 +266,9 @@ function App() {
             </a>
           </div>
         </a>
-        <a href="#" class=" block max-w-sm p-6 w-60 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
-          <div class="flex justify-around mt-2">
-            <div class="mt-4 font-bold text-2xl">
+        <a href="#" class=" block max-w-sm p-4 w-60 h-28 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 ">
+          <div class="flex justify-around">
+            <div class="mt-2 font-bold text-2xl">
               40
             </div>
             <div>
@@ -280,9 +289,40 @@ function App() {
         </a>
 
       </div>
-      <div class="flex ">
-        <TabbedComponent />
+      <div class="flex flex-row">
+        <div class="mt-2">
+          <TabbedComponent />
+        </div>
+        <div class="max-w-2xl  bg-white mr-4 p-2 mt-4 rounded-lg shadow">
+          <div class="flex flex-row mt-2">
+            <img id="1" src="https://t3.ftcdn.net/jpg/05/24/49/24/360_F_524492467_7ZDUkMzM2Vl6vf6yvw9PKwHFYn2kWda9.jpg" class="w-7 h-7 mt-4 "></img>
+            <h1 class="pt-5 text-xl pl-3">Live&nbsp;Map</h1>
+          </div>
+
+          <div class="bg-white h-3 border border-b-1 border-t-0 border-l-0 border-r-0 border-gray-300 flex justify-between items-center px-80">
+          </div>
+          <div>
+            <form>
+              <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only  ">Search</label>
+              <div class="relative">
+                <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+                  <svg class="w-4 h-4 text-gray-500 " aria-hidden="true" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
+                  </svg>
+                </div>
+                <input type="search" id="default-search" class=" mt-2 block w-full py-3  pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 " placeholder="Search for technicians,vehicles..." required></input>
+
+              </div>
+            </form>
+            <div class='flex justify-center items-center pt-10' >
+              <img class="h-10 w-10" id="3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Picture_icon_BLACK.svg/1200px-Picture_icon_BLACK.svg.png"></img>
+            </div>
+          </div>
+        </div>
       </div>
+
+
+
     </div>
   );
 }
