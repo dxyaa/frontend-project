@@ -6,9 +6,9 @@ function MyDatePicker() {
   const [selectedDate, setSelectedDate] = useState(null);
 
   return (
-    <div className="relative w-64">
+    <div className="relative sm:w-full md:w-64"> {/* Adjust the width based on screen size */}
       <DatePicker
-      showIcon
+        showIcon
         selected={selectedDate}
         onChange={(date) => setSelectedDate(date)}
         dateFormat="MM/dd/yyyy"
@@ -21,6 +21,7 @@ function MyDatePicker() {
       </span>
     </div>
   );
+  
 }
 
 function App() {

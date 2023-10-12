@@ -6,64 +6,67 @@ function TabbedComponent() {
     const handleTabClick = (tabNumber) => {
         setActiveTab(tabNumber);
     };
-
     return (
-        <div className="max-w-3xl ml-28 mt-2  px-10">
-            <div className="flex gap-1 ">
+        <div className="max-w-3xl ml-2 mt-2 px-2 sm:ml-28 sm:px-10">
+            <div className="flex flex-wrap gap-1">
                 <div
-                    className={`rounded-t-lg  text-center w-1/4 py-1 cursor-pointer ${activeTab === 1 ? 'bg-blue-500 text-white' : 'bg-gray-100'}`}
+                    className={`rounded-t-lg text-center w-1/2 sm:w-1/4 py-1 cursor-pointer ${activeTab === 1 ? 'bg-blue-500 text-white' : 'bg-gray-100'
+                        }`}
                     onClick={() => handleTabClick(1)}
                 >
-                    Today's&nbsp;Task
+                    Today's Task
                 </div>
                 <div
-                    className={`rounded-t-lg text-center w-1/4 py-1 cursor-pointer ${activeTab === 2 ? 'bg-blue-500 text-white' : 'bg-gray-100'}`}
+                    className={`rounded-t-lg text-center w-1/2 sm:w-1/4 py-1 cursor-pointer ${activeTab === 2 ? 'bg-blue-500 text-white' : 'bg-gray-100'
+                        }`}
                     onClick={() => handleTabClick(2)}
                 >
-                    My&nbsp;Jobs
+                    My Jobs
                 </div>
                 <div
-                    className={`rounded-t-lg text-center w-1/4 py-1 cursor-pointer ${activeTab === 3 ? 'bg-blue-500 text-white' : 'bg-gray-100'}`}
+                    className={`rounded-t-lg text-center w-1/2 sm:w-1/4 py-1 cursor-pointer ${activeTab === 3 ? 'bg-blue-500 text-white' : 'bg-gray-100'
+                        }`}
                     onClick={() => handleTabClick(3)}
                 >
-                    Active&nbsp;Jobs
+                    Active Jobs
                 </div>
                 <div
-                    className={`rounded-t-lg text-center w-1/4 py-1 cursor-pointer ${activeTab === 4 ? 'bg-blue-500 text-white' : 'bg-gray-100'}`}
+                    className={`rounded-t-lg text-center w-1/2 sm:w-1/4 py-1 cursor-pointer ${activeTab === 4 ? 'bg-blue-500 text-white' : 'bg-gray-100'
+                        }`}
                     onClick={() => handleTabClick(4)}
                 >
-                    Unscheduled&nbsp;Jobs
+                    Unscheduled Jobs
                 </div>
             </div>
 
             <div class="bg-white border ">
                 {activeTab === 1 && (
                     <div class="border rounded-lg border-2 border-blue-500 bg-white">
-                        <div className=' bg-white p-5 '>
+                        <div className=' bg-white p-2 sm:p-5 '>
 
-                            <div class="relative flex justify-center">
+                            <div class="relative">
                                 <table class="w-full text-sm text-left text-gray-500 ">
                                     <thead class="text-s  text-gray-400  bg-gray-100 ">
                                         <tr>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-centerpy-2 sm:px-6 py-3">
                                                 Job Id+Task No
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Job&nbsp;manager
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Task&nbsp;name
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Status
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Actions
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="bg-white border-b px-6 py-4 ">
+                                        <tr class="bg-white border-b py-2 sm:px-6 py-4 ">
                                             <th scope="row" class="text-center font-medium text-gray-900 whitespace-nowrap ">
                                                 8422-2356
                                             </th>
@@ -99,7 +102,7 @@ function TabbedComponent() {
                                             </td>
 
                                         </tr>
-                                        <tr class="bg-white border-b px-6 py-4 ">
+                                        <tr class="bg-white border-b py-2 sm:px-6 py-4 ">
                                             <th scope="row" class="text-center font-medium text-gray-900 whitespace-nowrap ">
                                                 88922
                                             </th>
@@ -135,7 +138,7 @@ function TabbedComponent() {
                                             </td>
 
                                         </tr>
-                                        <tr class="bg-white border-b px-6 py-4 ">
+                                        <tr class="bg-white border-b py-2 sm:px-6 py-4  ">
                                             <th scope="row" class="text-center  px-6 py-4 font-medium text-gray-900 whitespace-nowrap ">
                                                 9046
                                             </th>
@@ -175,32 +178,37 @@ function TabbedComponent() {
                                 </table>
                             </div>
                         </div>
-                        <nav aria-label="Page navigation example ">
+                        <nav aria-label="Page navigation example">
                             <ul class="flex items-center -space-x-px h-8 text-sm mt-2">
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white  rounded-l-lg hover:bg-gray-100 hover:text-gray-700 ">
+
+                                <li class="block sm:inline-block">
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 ml-0 sm:ml-2 leading-tight text-gray-500 bg-white rounded-l-lg hover:bg-gray-100 hover:text-gray-700">
                                         <svg class="w-2.5 h-2.5" aria-hidden="true" fill="none" viewBox="0 0 6 10">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
                                         </svg>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white  hover:bg-gray-100 hover:text-gray-700 ">1</a>
+
+
+                                <li class="block sm:inline-block">
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white hover:bg-gray-100 hover:text-gray-700">1</a>
                                 </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white  hover:bg-gray-100 hover:text-gray-700 ">2</a>
+                                <li class="block sm:inline-block">
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white hover:bg-gray-100 hover:text-gray-700">2</a>
                                 </li>
-                                <li>
-                                    <a href="#" aria-current="page" class="z-10 flex items-center justify-center px-3 h-8 leading-tight text-blue-600  bg-blue-50 hover:bg-blue-100 hover:text-blue-700 ">3</a>
+                                <li class="block sm:inline-block">
+                                    <a href="#" aria-current="page" class="z-10 flex items-center justify-center px-3 h-8 leading-tight text-blue-600 bg-blue-50 hover:bg-blue-100 hover:text-blue-700">3</a>
                                 </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white  hover:bg-gray-100 hover:text-gray-700 ">4</a>
+                                <li class="block sm:inline-block">
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white hover-bg-gray-100 hover-text-gray-700">4</a>
                                 </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white  hover:bg-gray-100 hover:text-gray-700 ">5</a>
+                                <li class="block sm:inline-block">
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white hover-bg-gray-100 hover-text-gray-700">5</a>
                                 </li>
-                                <li>
-                                    <a href="#" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white  rounded-r-lg hover:bg-gray-100 hover:text-gray-700 ">
+
+
+                                <li class="block sm:inline-block">
+                                    <a href="#" class="flex items-center justify-center px-3 h-8 sm:mr-0 leading-tight text-gray-500 bg-white rounded-r-lg hover-bg-gray-100 hover-text-gray-700">
                                         <span class="sr-only">Next</span>
                                         <svg class="w-2.5 h-2.5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
@@ -209,39 +217,38 @@ function TabbedComponent() {
                                 </li>
                             </ul>
                         </nav>
-
                     </div>
                 )}
                 {activeTab === 2 && (
                     <div class="border rounded-lg border-2 border-blue-500 bg-white">
-                        <div className=' bg-white p-5 '>
+                        <div className=' bg-white p-2 sm:p-5  '>
 
                             <div class="relative flex justify-center">
                                 <table class="w-full text-sm text-left text-gray-500 ">
                                     <thead class="text-s  text-gray-400  bg-gray-100 ">
                                         <tr>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Job&nbsp;Id
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-centerpy-2 sm:px-6 py-3">
                                                 Acc&nbsp;Name
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-centerpy-2 sm:px-6 py-3">
                                                 Address
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Estimates
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Task&nbsp;Status
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Actions
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="bg-white border-b px-6 py-4 ">
+                                        <tr class="bg-white border-b py-2 sm:px-6 py-4 ">
                                             <th scope="row" class="text-center font-medium text-gray-900 whitespace-nowrap ">
                                                 8422
                                             </th>
@@ -280,7 +287,7 @@ function TabbedComponent() {
                                             </td>
 
                                         </tr>
-                                        <tr class="bg-white border-b px-6 py-4 ">
+                                        <tr class="bg-white border-b py-2 sm:px-6 py-4 ">
                                             <th scope="row" class="text-center font-medium text-gray-900 whitespace-nowrap ">
                                                 8422
                                             </th>
@@ -369,28 +376,28 @@ function TabbedComponent() {
                                 <table class="w-full text-sm text-left text-gray-500 ">
                                     <thead class="text-s  text-gray-400  bg-gray-100 ">
                                         <tr>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Job&nbsp;Id
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Job&nbsp;manager
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Acc Name
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Estimates
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Tasks
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Actions
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="bg-white border-b px-6 py-4 ">
+                                        <tr class="bg-white border-b py-2 sm:px-6 py-4 ">
                                             <th scope="row" class="text-center font-medium text-gray-900 whitespace-nowrap ">
                                                 8422
                                             </th>
@@ -429,7 +436,7 @@ function TabbedComponent() {
                                             </td>
 
                                         </tr>
-                                        <tr class="bg-white border-b px-6 py-4 ">
+                                        <tr class="bg-white border-b py-2 sm:px-6 py-4  ">
                                             <th scope="row" class="text-center font-medium text-gray-900 whitespace-nowrap ">
                                                 84322
                                             </th>
@@ -518,26 +525,26 @@ function TabbedComponent() {
                                 <table class="w-full text-sm text-left text-gray-500 ">
                                     <thead class="text-s  text-gray-400  bg-gray-100 ">
                                         <tr>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Job&nbsp;Id
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Job&nbsp;manager
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Acc Name
                                             </th>
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-centerpy-2 sm:px-6 py-3">
                                                 Estimates
                                             </th>
 
-                                            <th scope="col" class="text-center px-6 py-3">
+                                            <th scope="col" class="text-center py-2 sm:px-6 py-3">
                                                 Actions
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <tr class="bg-white border-b px-6 py-4 ">
+                                        <tr class="bg-white border-b py-2 sm:px-6 py-4  ">
                                             <th scope="row" class="text-center font-medium text-gray-900 whitespace-nowrap ">
                                                 8422
                                             </th>
@@ -576,7 +583,7 @@ function TabbedComponent() {
                                                 Schedule Job
                                             </div>
                                         </tr>
-                                        <tr class="bg-white border-b px-6 py-4 ">
+                                        <tr class="bg-white border-b py-2 sm:px-6 py-4  ">
                                             <th scope="row" class="text-center font-medium text-gray-900 whitespace-nowrap ">
                                                 84322
                                             </th>
